@@ -1,0 +1,34 @@
+{
+  "name": "desafio-inbev-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Desafio de automacao E2E (Frontend + API) do ServeRest com Cypress e Playwright.",
+  "keywords": ["cypress", "playwright", "e2e", "automacao", "inbev"],
+  "license": "MIT",
+  "author": "Laisa Boralli",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:api": "cypress run --spec \"cypress/e2e/api/**/*.cy.js\"",
+    "cy:run:frontend": "cypress run --spec \"cypress/e2e/frontend/**/*.cy.js\"",
+    "pw:test": "playwright test",
+    "pw:test:api": "playwright test playwright/tests/api",
+    "pw:test:frontend": "playwright test playwright/tests/frontend",
+    "pw:report": "playwright show-report",
+    "pw:install": "playwright install --with-deps chromium",
+    "test": "npm run test:cypress && npm run test:playwright",
+    "test:cypress": "cypress run",
+    "test:playwright": "playwright test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "@playwright/test": "^1.48.0",
+    "cypress": "^13.15.0",
+    "eslint": "^9.13.0",
+    "eslint-plugin-cypress": "^4.0.0",
+    "eslint-plugin-playwright": "^2.0.0",
+    "globals": "^15.11.0"
+  }
+}
