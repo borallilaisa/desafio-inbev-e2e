@@ -1,4 +1,4 @@
-import loginApi from '../../support/api/loginApi';
+import loginApi from '../../support/api/loginAPI';
 import { criarUsuario } from '../../support/factories/dataFactory';
 
 describe('API | Login', () => {

@@ -1,4 +1,4 @@
-import produtosApi from '../../support/api/produtosApi';
+import produtosApi from '../../support/api/produtosAPI';
 import { criarProduto, criarUsuario, ID_INEXISTENTE } from '../../support/factories/dataFactory';
 
 describe('API | Produtos', () => {

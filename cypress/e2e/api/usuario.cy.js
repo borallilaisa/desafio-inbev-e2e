@@ -1,4 +1,4 @@
-import usuariosApi from '../../support/api/usuariosApi';
+import usuariosApi from '../../support/api/usuariosAPI';
 import { criarUsuario, ID_INEXISTENTE } from '../../support/factories/dataFactory';
 
 describe('API | Usuários', () => {

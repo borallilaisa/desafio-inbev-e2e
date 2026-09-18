@@ -1,5 +1,5 @@
 import RegisterPage from '../../support/pages/RegisterPage';
-import usuariosApi from '../../support/api/usuariosApi';
+import usuariosApi from '../../support/api/usuariosAPI';
 import { criarUsuario } from '../../support/factories/dataFactory';
 
 describe('Frontend | Cadastro de usuário', () => {
