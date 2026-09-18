@@ -1,8 +1,8 @@
 # Desafio InBev E2E
 
-Projeto de automação de testes **E2E (Frontend + API)** da aplicação [ServeRest](https://serverest.dev), implementado com **Cypress** e **Playwright**.
+Projeto de automação de testes E2E (Frontend + API) da aplicação [ServeRest](https://serverest.dev), implementado com Cypress** e Playwright.
 
-A mesma suíte é replicada nas duas ferramentas para fins de estudo/comparação: cenários de **API** (contratos e regras de negócio) e de **Frontend** (fluxos de usuário na interface).
+A mesma suíte é replicada nas duas ferramentas em cenários de API e de Frontend.
 
 ## Tecnologias
 
@@ -13,15 +13,15 @@ A mesma suíte é replicada nas duas ferramentas para fins de estudo/comparaçã
 - [ESLint](https://eslint.org/) para padronização de código
 
 ## Cobertura de testes
+API:
+- Cadastro, listagem, busca, atualização e exclusão de usuários
+- Autenticação (credenciais válidas/inválidas, e-mail inexistente)
+- CRUD de produtos, regras de admin, token inválido e nome duplicado   
 
-| Área     | Cenários                                                                                     | Cypress  | Playwright |
-| -------- | -------------------------------------------------------------------------------------------- | -------- | ---------- |
-| API      | Cadastro, listagem, busca, atualização e exclusão de usuários                                 | ✅       | ✅         |
-| API      | Autenticação (credenciais válidas/inválidas, e-mail inexistente)                              | ✅       | ✅         |
-| API      | CRUD de produtos, regras de admin, token inválido e nome duplicado                             | ✅       | ✅         |
-| Frontend | Cadastro de usuário (sucesso e e-mail duplicado)                                              | ✅       | ✅         |
-| Frontend | Login (sucesso, senha inválida e redirecionamento sem autenticação)                            | ✅       | ✅         |
-| Frontend | Pesquisa de produtos (existente e inexistente)                                                | ✅       | ✅         |
+FrontEnd:
+- Cadastro de usuário (sucesso e e-mail duplicado)          
+- Login (sucesso, senha inválida e redirecionamento sem autenticação) 
+- Pesquisa de produtos (existente e inexistente)
 
 ## Estrutura do projeto
 
@@ -60,26 +60,8 @@ desafio-inbev-e2e/
 npm install
 ```
 
-Para o Playwright, instale também o navegador (Chromium):
-
 ```bash
 npm run pw:install
-```
-
-## Variáveis de ambiente
-
-Ambas têm valores padrão apontando para o ambiente público do ServeRest, então não é obrigatório configurá-las.
-
-| Variável       | Padrão                          | Descrição                        |
-| -------------- | ------------------------------- | -------------------------------- |
-| `FRONTEND_URL` | `https://front.serverest.dev`   | URL base do frontend             |
-| `API_URL`      | `https://serverest.dev`         | URL base da API                  |
-
-Exemplo (PowerShell):
-
-```powershell
-$env:API_URL = "https://serverest.dev"
-$env:FRONTEND_URL = "https://front.serverest.dev"
 ```
 
 ## Como executar
