@@ -13,7 +13,7 @@ module.exports = defineConfig({
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
-    ['json', { outputFile: 'test-results/results.json' }],
+    [require.resolve('./scripts/playwright-summary-reporter.js')],
     ...(process.env.CI ? [['github']] : []),
   ],
   use: {

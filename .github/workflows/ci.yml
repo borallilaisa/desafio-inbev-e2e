@@ -72,10 +72,6 @@ jobs:
       - name: Executar testes Playwright
         run: npx playwright test
 
-      - name: Resumo dos testes (GitHub Actions)
-        if: always()
-        run: node scripts/playwright-summary.js
-
       - name: Publicar relatório do Playwright
         if: always()
         uses: actions/upload-artifact@v4
