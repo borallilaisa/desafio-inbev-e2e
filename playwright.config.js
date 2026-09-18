@@ -13,6 +13,8 @@ module.exports = defineConfig({
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['json', { outputFile: 'test-results/results.json' }],
+    ...(process.env.CI ? [['github']] : []),
   ],
   use: {
     baseURL: process.env.FRONTEND_URL || 'https://front.serverest.dev',

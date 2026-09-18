@@ -120,7 +120,7 @@ O pipeline (`.github/workflows/ci.yml`) é executado em `push` e `pull_request` 
 - **Cypress**: instala dependências e executa `cypress run` (Chrome headless).
 - **Playwright**: instala o Chromium e executa `playwright test`.
 
-Os relatórios e artefatos são publicados como _artifacts_ do workflow.
+Os relatórios e artefatos são publicados como _artifacts_ do workflow. O job do Playwright também publica um **resumo dos testes** na página do run (Job Summary do GitHub Actions) e anotações de falha no PR, gerados a partir de `test-results/results.json` pelo script `scripts/playwright-summary.js`.
 
 ## Autor
 
