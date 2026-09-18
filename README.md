@@ -1,6 +1,6 @@
 # Desafio InBev E2E
 
-Projeto de automação de testes E2E (Frontend + API) da aplicação [ServeRest](https://serverest.dev), implementado com Cypress** e Playwright.
+Projeto de automação de testes E2E (Frontend + API) da aplicação [ServeRest](https://serverest.dev), implementado com Cypress e Playwright.
 
 A mesma suíte é replicada nas duas ferramentas em cenários de API e de Frontend.
 
